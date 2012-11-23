@@ -1,0 +1,95 @@
+body {
+  padding: 20px; }
+
+$corner_size: 15px;
+$padding: 15px;
+$border_size: 1px;
+$shadow_size: 4px;
+
+
+.box-wrapper {
+  /* eiter use float:left; width: 100% or padding-top: 1px; margin-top: -1px; */
+  float: left;
+  width: 100%;
+ }
+ 
+.box-inner {
+  margin: -10px;
+  }
+
+
+.box {
+  position: relative;
+  margin: $padding - $shadow_size;
+  padding: $shadow_size + $border_size;
+  /* important make negative margin works on .content when box is not floating, must be 1px min */
+  zoom: 1;
+  .content {
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    zoom: 1; }
+  .bg > div {
+    background-image: url(http://dl.dropbox.com/u/6696146/cdn/rounded-corner.png); } }
+
+.bg {
+  .tl, .tr {
+    width: $corner_size;
+    height: $corner_size;
+    position: absolute;
+    top: -$corner_size; }
+  .tl {
+    background-position: -54px 0;
+    background-repeat: no-repeat;
+    left: -$corner_size; }
+  .tr {
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    right: -$corner_size; }
+  .tm {
+    background-position: -70px 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -$corner_size;
+    left: 0;
+    width: 100%;
+    height: $corner_size; }
+  .ml {
+    width: $corner_size;
+    position: absolute;
+    height: 100%;
+    background-repeat: repeat-y;
+    background-position: -2px 0;
+    position: absolute;
+    top: 0;
+    left: -$corner_size; }
+  .mr {
+    width: 15px;
+    position: absolute;
+    height: 100%;
+    background-repeat: repeat-y;
+    background-position: -36px 0;
+    position: absolute;
+    top: 0;
+    right: -$corner_size; }
+  .bl, .br {
+    width: $corner_size;
+    height: $corner_size;
+    position: absolute;
+    bottom: -$corner_size; }
+  .bl {
+    background-position: -54px -36px;
+    background-repeat: no-repeat;
+    left: -$corner_size; }
+  .br {
+    background-position: 100% -36px;
+    background-repeat: no-repeat;
+    right: -$corner_size; }
+  .bm {
+    background-repeat: repeat-y;
+    background-position: -70px -36px;
+    position: absolute;
+    bottom: -$corner_size;
+    left: 0;
+    width: 100%;
+    height: $corner_size; } }

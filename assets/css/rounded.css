@@ -1,0 +1,101 @@
+body {
+  padding: 20px;
+}
+
+.box-wrapper {
+  /* eiter use float:left; width: 100% or padding-top: 1px; margin-top: -1px; */
+  float: left;
+  width: 100%;
+}
+
+.box-inner {
+  margin: -10px;
+}
+
+.box {
+  position: relative;
+  margin: 11px;
+  padding: 5px;
+  /* important make negative margin works on .content when box is not floating, must be 1px min */
+  zoom: 1;
+}
+.box .content {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  zoom: 1;
+}
+.box .bg > div {
+  background-image: url(http://dl.dropbox.com/u/6696146/cdn/rounded-corner.png);
+}
+
+.bg .tl, .bg .tr {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -15px;
+}
+.bg .tl {
+  background-position: -54px 0;
+  background-repeat: no-repeat;
+  left: -15px;
+}
+.bg .tr {
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  right: -15px;
+}
+.bg .tm {
+  background-position: -70px 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+.bg .ml {
+  width: 15px;
+  position: absolute;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-position: -2px 0;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+.bg .mr {
+  width: 15px;
+  position: absolute;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-position: -36px 0;
+  position: absolute;
+  top: 0;
+  right: -15px;
+}
+.bg .bl, .bg .br {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: -15px;
+}
+.bg .bl {
+  background-position: -54px -36px;
+  background-repeat: no-repeat;
+  left: -15px;
+}
+.bg .br {
+  background-position: 100% -36px;
+  background-repeat: no-repeat;
+  right: -15px;
+}
+.bg .bm {
+  background-repeat: repeat-y;
+  background-position: -70px -36px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
